@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, MapPin, Users, Globe, Info, Activity } from 'lucide-react';
+import { ArrowLeft, MapPin, Users, Globe, Activity } from 'lucide-react';
 import { fetchCountryByCode, fetchCountriesByCodes } from '../services/api';
 import { Country } from '../types';
 
@@ -58,13 +58,13 @@ const CountryDetail: React.FC<CountryDetailProps> = ({ code }) => {
           <div className="relative">
             <div className="absolute inset-0 bg-atlas-accent/10 blur-[120px] -z-10 rounded-full scale-110"></div>
             <div className="misty-glass p-4 rounded-[2.5rem] overflow-hidden">
-               <img
+              <img
                 src={country.flags.svg}
                 alt={country.name.common}
                 className="w-full h-auto rounded-[1.8rem] shadow-2xl transition-all duration-700"
               />
             </div>
-            
+
             <div className="mt-12 grid grid-cols-2 gap-8">
               <div className="misty-glass p-8 rounded-3xl">
                 <Globe className="text-atlas-accent mb-4" size={20} />
@@ -91,39 +91,39 @@ const CountryDetail: React.FC<CountryDetailProps> = ({ code }) => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 border-t border-white/5 pt-16">
-               <div className="space-y-8">
-                  <section className="space-y-4">
-                    <div className="flex items-center gap-3 text-atlas-accent">
-                      <MapPin size={18} />
-                      <span className="text-[10px] font-bold uppercase tracking-widest">Primary Hub</span>
-                    </div>
-                    <p className="text-3xl font-light text-white">{country.capital?.[0] || 'Unknown'}</p>
-                    <p className="text-sm text-atlas-secondary font-light">{country.subregion || 'Global Territory'}</p>
-                  </section>
-               </div>
+              <div className="space-y-8">
+                <section className="space-y-4">
+                  <div className="flex items-center gap-3 text-atlas-accent">
+                    <MapPin size={18} />
+                    <span className="text-[10px] font-bold uppercase tracking-widest">Primary Hub</span>
+                  </div>
+                  <p className="text-3xl font-light text-white">{country.capital?.[0] || 'Unknown'}</p>
+                  <p className="text-sm text-atlas-secondary font-light">{country.subregion || 'Global Territory'}</p>
+                </section>
+              </div>
 
-               <div className="space-y-8">
-                  <section className="space-y-4">
-                    <div className="flex items-center gap-3 text-atlas-accent">
-                      <Activity size={18} />
-                      <span className="text-[10px] font-bold uppercase tracking-widest">Vital Stats</span>
+              <div className="space-y-8">
+                <section className="space-y-4">
+                  <div className="flex items-center gap-3 text-atlas-accent">
+                    <Activity size={18} />
+                    <span className="text-[10px] font-bold uppercase tracking-widest">Vital Stats</span>
+                  </div>
+                  <div className="space-y-4 text-sm font-light">
+                    <div className="flex justify-between border-b border-white/5 pb-2">
+                      <span className="text-atlas-secondary">Currencies</span>
+                      <span className="text-white text-right font-medium">{Object.values(country.currencies || {}).map(c => c.name).join(', ')}</span>
                     </div>
-                    <div className="space-y-4 text-sm font-light">
-                      <div className="flex justify-between border-b border-white/5 pb-2">
-                        <span className="text-atlas-secondary">Currencies</span>
-                        <span className="text-white text-right font-medium">{Object.values(country.currencies || {}).map(c => c.name).join(', ')}</span>
-                      </div>
-                      <div className="flex justify-between border-b border-white/5 pb-2">
-                        <span className="text-atlas-secondary">Linguistics</span>
-                        <span className="text-white text-right font-medium">{Object.values(country.languages || {}).join(', ')}</span>
-                      </div>
-                      <div className="flex justify-between border-b border-white/5 pb-2">
-                        <span className="text-atlas-secondary">Domain</span>
-                        <span className="text-atlas-accent font-bold">{country.tld?.join(', ')}</span>
-                      </div>
+                    <div className="flex justify-between border-b border-white/5 pb-2">
+                      <span className="text-atlas-secondary">Linguistics</span>
+                      <span className="text-white text-right font-medium">{Object.values(country.languages || {}).join(', ')}</span>
                     </div>
-                  </section>
-               </div>
+                    <div className="flex justify-between border-b border-white/5 pb-2">
+                      <span className="text-atlas-secondary">Domain</span>
+                      <span className="text-atlas-accent font-bold">{country.tld?.join(', ')}</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </div>
 
             <div className="pt-20 border-t border-white/5">

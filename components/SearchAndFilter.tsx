@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Search, ChevronDown, Compass } from 'lucide-react';
+import { Search, ChevronDown } from 'lucide-react';
 import { Region } from '../types';
 
 interface SearchAndFilterProps {
