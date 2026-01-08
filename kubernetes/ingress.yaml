@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: global-details-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    # Add additional annotations as needed for your specific ingress controller
+    # nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: global-details.example.com  # Replace with your actual domain
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: global-details
+            port:
+              number: 80
+ 

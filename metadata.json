@@ -1,0 +1,5 @@
+{
+  "name": "Global Explorer - REST Countries",
+  "description": "A comprehensive dashboard to explore information about every country in the world using the REST Countries API. Features searching, region filtering, and detailed country insights with dark mode support.",
+  "requestFramePermissions": []
+}
