@@ -43,7 +43,7 @@ const Home: React.FC = () => {
         <div className="mb-12 border-b border-atlas-secondary/10 pb-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-2xl">
-              <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-atlas-accent mb-4 block">Centralized Intelligence</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-atlas-accent mb-4 block">Centralize Intelligence</span>
               <h2 className="font-serif text-6xl md:text-8xl mb-6 text-white leading-[0.9] tracking-tighter">Global Insight</h2>
               <p className="text-atlas-secondary text-sm md:text-base leading-relaxed opacity-80 max-w-lg">
                 Access a comprehensive repository of international data, demographics, and regional identifiers synchronized in real-time.
