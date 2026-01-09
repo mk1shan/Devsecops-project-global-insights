@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: global-details
-        image: ghcr.io/mk1shan/devsecops-project-global-insights:sha-0fd6e9b75e3add1f3a8a62114981510d48242e23
+        image: ghcr.io/mk1shan/devsecops-project-global-insights:sha-2560557e9333e5d92972449017989e32da0dee18
         # Image will be automatically updated by CI/CD pipeline
         imagePullPolicy: Always
         ports:
