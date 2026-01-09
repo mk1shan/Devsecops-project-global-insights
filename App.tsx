@@ -35,7 +35,7 @@ const App: React.FC = () => {
       <footer className="py-32 border-t border-white/5 mx-6 md:mx-12 mt-20">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12 opacity-40">
           <div className="flex flex-col">
-            <div className="font-serif text-3xl italic tracking-tighter text-white">Global Insight</div>
+            <div className="font-serif text-3xl italic tracking-tighter text-white">Global Insights</div>
             <div className="text-[9px] font-bold tracking-[0.4em] uppercase text-atlas-accent">The World Details Archive</div>
           </div>
           <div className="flex flex-col items-center md:items-end gap-2">
